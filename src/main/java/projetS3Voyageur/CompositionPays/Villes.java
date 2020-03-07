@@ -3,13 +3,13 @@ package projetS3Voyageur.CompositionPays;
 import java.awt.Point;
 import java.util.List;
 
-class Villes {
+public class Villes {
     private Point[] positionDesVilles;
     private int nombreDeVilles;
 
 
 
-    Villes(int nombreDeVilles) {
+    public Villes(int nombreDeVilles) {
         if (nombreDeVilles < 3) {
             throw new /* TODO : utilisais des exceptions pérsonalisée */ IndexOutOfBoundsException(
                     "Veuillez écrire un nombre de villes compris entre 3 et 15");
@@ -22,7 +22,7 @@ class Villes {
         }
     }
 
-    Villes(List<Point> points){
+    public Villes(List<Point> points){
         this.nombreDeVilles = points.size();
         positionDesVilles = new Point[nombreDeVilles];
         int i =0;
@@ -37,7 +37,7 @@ class Villes {
      * @param ville       Numéro de la ville dont la position va être modifiée
      * @param newPosVille Nouvelle position
      */
-    void setPositionVille(int ville, Point posVille) {
+    public void setPositionVille(int ville, Point posVille) {
         verifieNumVille(ville);
         positionDesVilles[ville] = posVille;
 
@@ -49,12 +49,12 @@ class Villes {
      * @param ville numéro de la ville à localiser
      * @return {@Code Position} la localisation de la ville
      */
-    Point getPositionVille(int ville) {
+    public Point getPositionVille(int ville) {
         verifieNumVille(ville);
         return positionDesVilles[ville];
     }
 
-    int getNombreDeVilles() {
+    public int getNombreDeVilles() {
         return nombreDeVilles;
     }
 
