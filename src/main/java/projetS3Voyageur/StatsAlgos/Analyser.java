@@ -33,7 +33,7 @@ public class Analyser {
 
     // TODO: note pour moi-m^me Mathieu oublie pas que tu as mis en paramètre
     // tempsMax
-    Analyser(ModeRecherche[] listeAlgo, int nombreDeVilles, int nombreDeTests, double tempsMax) {
+    public Analyser(ModeRecherche[] listeAlgo, int nombreDeVilles, int nombreDeTests, double tempsMax) {
         this.tempsMax = tempsMax;
         this.listeAlgo = listeAlgo;
         this.nombreDeTests = nombreDeTests;

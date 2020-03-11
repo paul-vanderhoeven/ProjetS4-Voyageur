@@ -2,7 +2,7 @@ package projetS3Voyageur.ModesDeRecherches;
 
 import projetS3Voyageur.CompositionPays.Pays;
 
-class BackTrackV2 implements ModeRecherche {
+public class BackTrackV2 implements ModeRecherche {
 
     private int toutesVillesVisitees;
 

@@ -1,4 +1,4 @@
-package ProjetS4;
+package ProjetS4.CompositionPays;
 
 import static org.junit.jupiter.api.Assertions.*;
 

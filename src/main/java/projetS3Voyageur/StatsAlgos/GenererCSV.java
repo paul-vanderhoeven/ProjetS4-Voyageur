@@ -40,7 +40,7 @@ public class GenererCSV {
     // TODO: Néttoyer la class, Il ne respecte pas le principe Ouvert fermer
     // TODO: Cette classe doit-elle juste avec
     private byte nbVillesMax = 12;
-    private int nbIteration = 100;
+    private int nbIteration = 10;
     private long tempsMax = 180;
 
     private String nomFichier = String.valueOf(LocalDate.now()) + ".csv";

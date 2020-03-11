@@ -1,8 +1,7 @@
-package ProjetS4;
+package ProjetS4.CompositionPays;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import projetS3Voyageur.CompositionPays.GestionDistance;
 import projetS3Voyageur.CompositionPays.Villes;
 
