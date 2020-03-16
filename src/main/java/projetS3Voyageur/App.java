@@ -9,6 +9,7 @@ import projetS3Voyageur.StatsAlgos.GenererCSV;
 import javax.sound.midi.Track;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 class App {
 

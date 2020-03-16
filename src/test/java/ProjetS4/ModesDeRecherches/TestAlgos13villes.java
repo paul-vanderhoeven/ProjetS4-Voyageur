@@ -7,6 +7,8 @@ import projetS3Voyageur.CompositionPays.Pays;
 import projetS3Voyageur.ModesDeRecherches.*;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 
@@ -29,19 +31,25 @@ public class TestAlgos13villes {
 
     @Before
     public void init() {
-        p.setPositionVille(0, p1);
-        p.setPositionVille(1, p2);
-        p.setPositionVille(2, p3);
-        p.setPositionVille(3, p4);
-        p.setPositionVille(4, p5);
-        p.setPositionVille(5, p6);
-        p.setPositionVille(6, p7);
-        p.setPositionVille(7, p8);
-        p.setPositionVille(8, p9);
-        p.setPositionVille(9, p10);
-        p.setPositionVille(10, p11);
-        p.setPositionVille(11, p12);
-        p.setPositionVille(12, p13);
+        ArrayList<Point> list = new ArrayList<>();
+        list.add(p1);
+        list.add(p2);
+        list.add(p3);
+        list.add(p4);
+        list.add(p5);
+        list.add(p6);
+        list.add(p7);
+        list.add(p8);
+        list.add(p9);
+        list.add(p10);
+        list.add(p11);
+        list.add(p12);
+        list.add(p13);
+        Collections.shuffle(list);
+
+        for (int i = 0; i < p.getNombreDeVilles(); i++) {
+            p.setPositionVille(i, list.get(i));
+        }
     }
 
     @Test
