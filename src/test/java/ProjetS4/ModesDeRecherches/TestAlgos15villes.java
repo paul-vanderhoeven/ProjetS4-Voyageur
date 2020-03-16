@@ -11,7 +11,7 @@ import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestAlgos9villes {
+public class TestAlgos15villes {
 
     Point p1 = new Point(200, 0);
     Point p2 = new Point(150, 150);
@@ -22,7 +22,13 @@ public class TestAlgos9villes {
     Point p7 = new Point(-350, -200);
     Point p8 = new Point(-300, -450);
     Point p9 = new Point(-150, -550);
-    Pays p = new Pays(9);
+    Point p10 = new Point(0, -550);
+    Point p11 = new Point(100, -500);
+    Point p12 = new Point(200, -400);
+    Point p13 = new Point(250, -200);
+    Point p14 = new Point(200, -150);
+    Point p15 = new Point(250, -50);
+    Pays p = new Pays(15);
 
     @Before
     public void init() {
@@ -36,6 +42,12 @@ public class TestAlgos9villes {
         list.add(p7);
         list.add(p8);
         list.add(p9);
+        list.add(p10);
+        list.add(p11);
+        list.add(p12);
+        list.add(p13);
+        list.add(p14);
+        list.add(p15);
         Collections.shuffle(list);
 
         for (int i = 0; i < p.getNombreDeVilles(); i++) {
@@ -44,28 +56,29 @@ public class TestAlgos9villes {
     }
 
     @Test
-    public void test_9villes_backTrack() {
+    public void test_15villes_backTrack() {
         BackTrackV2 backTrackV2 = new BackTrackV2();
-        assertEquals(2097, test_algos_9villes(backTrackV2));
+        assertEquals(2307, test_algos_15villes(backTrackV2));
     }
-    @Test
-    public void test_9villes_brutforce() {
+
+    /*@Test         Trop long
+    public void test_15villes_brutforce() {
         BrutForceV2 brutForceV2 = new BrutForceV2();
-        assertEquals(2097, test_algos_9villes(brutForceV2));
-    }
+        assertEquals(2307, test_algos_15villes(brutForceV2));
+    }*/
     @Test
-    public void test_9villes_PlusProche() {
+    public void test_15villes_PlusProche() {
         PlusProcheV3 plusProcheV3 = new PlusProcheV3();
-        assertEquals(2097, test_algos_9villes(plusProcheV3));
+        assertEquals(2307, test_algos_15villes(plusProcheV3));
     }
     @Test
-    public void test_9villes_PPMulti() {
+    public void test_15villes_PPMulti() {
         PPMulti ppmulti = new PPMulti();
-        assertEquals(2097, test_algos_9villes(ppmulti));
+        assertEquals(2307, test_algos_15villes(ppmulti));
     }
 
     @Test
-    public void test_9villes_PPMulti_plsrs_calcul() {
+    public void test_15villes_PPMulti_plsrs_calcul() {
         PPMulti ppmulti = new PPMulti();
 
         ppmulti.recherche(p, 0);
@@ -76,20 +89,20 @@ public class TestAlgos9villes {
         ppmulti.recherche(p, 0);
         ppmulti.recherche(p, 0);
 
-        assertEquals(2097, (int) ppmulti.getParcours().getDistance());
+        assertEquals(2307, (int) ppmulti.getParcours().getDistance());
     }
     @Test
-    public void test_9villes_TrackProchesMulti() {
+    public void test_15villes_TrackProchesMulti() {
         TrackProchesMulti trackProchesMulti = new TrackProchesMulti();
-        assertEquals(2097, test_algos_9villes(trackProchesMulti));
+        assertEquals(2307, test_algos_15villes(trackProchesMulti));
     }
     @Test
-    public void test_9villes_TrackProches() {
+    public void test_15villes_TrackProches() {
         TrackProchesV2_1 trackProchesV2_1 = new TrackProchesV2_1();
-        assertEquals(2097, test_algos_9villes(trackProchesV2_1));
+        assertEquals(2307, test_algos_15villes(trackProchesV2_1));
     }
 
-    private int test_algos_9villes(ModeRecherche algo) {
+    private int test_algos_15villes(ModeRecherche algo) {
         algo.recherche(p, 0);
         return (int) algo.getParcours().getDistance();
     }

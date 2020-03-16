@@ -50,28 +50,28 @@ public class TestAlgos12villes {
     }
 
     @Test
-    public void test_13villes_backTrack() {
+    public void test_12villes_backTrack() {
         BackTrackV2 backTrackV2 = new BackTrackV2();
-        assertEquals(2248, test_algos_13villes(backTrackV2));
+        assertEquals(2248, test_algos_12villes(backTrackV2));
     }
     /*@Test
-    public void test_13villes_brutforce() {
+    public void test_12villes_brutforce() {
         BrutForceV2 brutForceV2 = new BrutForceV2();
-        assertEquals(2248, test_algos_13villes(brutForceV2));
+        assertEquals(2248, test_algos_12villes(brutForceV2));
     }*/
     @Test
-    public void test_13villes_PlusProche() {
+    public void test_12villes_PlusProche() {
         PlusProcheV3 plusProcheV3 = new PlusProcheV3();
-        assertEquals(2248, test_algos_13villes(plusProcheV3));
+        assertEquals(2248, test_algos_12villes(plusProcheV3));
     }
     @Test
-    public void test_13villes_PPMulti() {
+    public void test_12villes_PPMulti() {
         PPMulti ppmulti = new PPMulti();
-        assertEquals(2248, test_algos_13villes(ppmulti));
+        assertEquals(2248, test_algos_12villes(ppmulti));
     }
 
     @Test
-    public void test_13villes_PPMulti_plsrs_calcul() {
+    public void test_12villes_PPMulti_plsrs_calcul() {
         PPMulti ppmulti = new PPMulti();
 
         ppmulti.recherche(p, 0);
@@ -85,17 +85,17 @@ public class TestAlgos12villes {
         assertEquals(2248, (int) ppmulti.getParcours().getDistance());
     }
     @Test
-    public void test_13villes_TrackProchesMulti() {
+    public void test_12villes_TrackProchesMulti() {
         TrackProchesMulti trackProchesMulti = new TrackProchesMulti();
-        assertEquals(2248, test_algos_13villes(trackProchesMulti));
+        assertEquals(2248, test_algos_12villes(trackProchesMulti));
     }
     @Test
-    public void test_13villes_TrackProches() {
+    public void test_12villes_TrackProches() {
         TrackProchesV2_1 trackProchesV2_1 = new TrackProchesV2_1();
-        assertEquals(2248, test_algos_13villes(trackProchesV2_1));
+        assertEquals(2248, test_algos_12villes(trackProchesV2_1));
     }
 
-    private int test_algos_13villes(ModeRecherche algo) {
+    private int test_algos_12villes(ModeRecherche algo) {
         algo.recherche(p, 0);
         return (int) algo.getParcours().getDistance();
     }
