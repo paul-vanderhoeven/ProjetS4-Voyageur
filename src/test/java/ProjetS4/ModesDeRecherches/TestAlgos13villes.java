@@ -10,7 +10,7 @@ import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestAlgos14villes {
+public class TestAlgos13villes {
 
     Point p1 = new Point(200, 0);
     Point p2 = new Point(150, 150);
@@ -25,8 +25,7 @@ public class TestAlgos14villes {
     Point p11 = new Point(100, -500);
     Point p12 = new Point(200, -400);
     Point p13 = new Point(250, -200);
-    Point p14 = new Point(250, -50);
-    Pays p = new Pays(14);
+    Pays p = new Pays(13);
 
     @Before
     public void init() {
@@ -43,33 +42,31 @@ public class TestAlgos14villes {
         p.setPositionVille(10, p11);
         p.setPositionVille(11, p12);
         p.setPositionVille(12, p13);
-        p.setPositionVille(13, p14);
     }
 
     @Test
-    public void test_14villes_backTrack() {
+    public void test_13villes_backTrack() {
         BackTrackV2 backTrackV2 = new BackTrackV2();
-        assertEquals(2275, test_algos_14villes(backTrackV2));
+        assertEquals(2260, test_algos_13villes(backTrackV2));
     }
-
-    /*@Test         Trop long
-    public void test_14villes_brutforce() {
+    /*@Test     Trop long
+    public void test_13villes_brutforce() {
         BrutForceV2 brutForceV2 = new BrutForceV2();
-        assertEquals(2275, test_algos_14villes(brutForceV2));
+        assertEquals(2260, test_algos_13villes(brutForceV2));
     }*/
     @Test
-    public void test_14villes_PlusProche() {
+    public void test_13villes_PlusProche() {
         PlusProcheV3 plusProcheV3 = new PlusProcheV3();
-        assertEquals(2275, test_algos_14villes(plusProcheV3));
+        assertEquals(2260, test_algos_13villes(plusProcheV3));
     }
     @Test
-    public void test_14villes_PPMulti() {
+    public void test_13villes_PPMulti() {
         PPMulti ppmulti = new PPMulti();
-        assertEquals(2275, test_algos_14villes(ppmulti));
+        assertEquals(2260, test_algos_13villes(ppmulti));
     }
 
     @Test
-    public void test_14villes_PPMulti_plsrs_calcul() {
+    public void test_13villes_PPMulti_plsrs_calcul() {
         PPMulti ppmulti = new PPMulti();
 
         ppmulti.recherche(p, 0);
@@ -80,20 +77,20 @@ public class TestAlgos14villes {
         ppmulti.recherche(p, 0);
         ppmulti.recherche(p, 0);
 
-        assertEquals(2275, (int) ppmulti.getParcours().getDistance());
+        assertEquals(2260, (int) ppmulti.getParcours().getDistance());
     }
     @Test
-    public void test_14villes_TrackProchesMulti() {
+    public void test_13villes_TrackProchesMulti() {
         TrackProchesMulti trackProchesMulti = new TrackProchesMulti();
-        assertEquals(2275, test_algos_14villes(trackProchesMulti));
+        assertEquals(2260, test_algos_13villes(trackProchesMulti));
     }
     @Test
-    public void test_14villes_TrackProches() {
+    public void test_13villes_TrackProches() {
         TrackProchesV2_1 trackProchesV2_1 = new TrackProchesV2_1();
-        assertEquals(2275, test_algos_14villes(trackProchesV2_1));
+        assertEquals(2260, test_algos_13villes(trackProchesV2_1));
     }
 
-    private int test_algos_14villes(ModeRecherche algo) {
+    private int test_algos_13villes(ModeRecherche algo) {
         algo.recherche(p, 0);
         return (int) algo.getParcours().getDistance();
     }

@@ -29,7 +29,7 @@ class App {
         Point p13 = new Point(250, -200);
         Point p14 = new Point(250, -50);
 
-        double distance = p1.distance(p2) + p2.distance(p3) + p3.distance(p4) + p4.distance(p5) + p5.distance(p6) + p6.distance(p7) + p7.distance(p8) + p8.distance(p9) + p9.distance(p10) + p10.distance(p11) + p11.distance(p12) + p12.distance(p13) + p13.distance(p14) + p14.distance(p1);
+        double distance = p1.distance(p2) + p2.distance(p3) + p3.distance(p4) + p4.distance(p5) + p5.distance(p6) + p6.distance(p7) + p7.distance(p8) + p8.distance(p9) + p9.distance(p1);
         System.out.println(distance);
     }
 }
