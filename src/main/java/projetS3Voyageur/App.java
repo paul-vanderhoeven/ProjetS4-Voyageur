@@ -30,11 +30,10 @@ class App {
         Point p1 = new Point(100, 0);
         Point p3 = new Point(-100, 150);
         Point p5 = new Point(-200, -150);
-        Point p6 = new Point(-100, -250);
         Point p7 = new Point(50, -250);
         Pays p = new Pays(5);
 
-        double distance = p1.distance(p3) + p3.distance(p5) + p5.distance(p6) + p6.distance(p7) + p7.distance(p1);
+        double distance = p1.distance(p3) + p3.distance(p5) + p5.distance(p7) + p7.distance(p1);
         System.out.println(distance);
     }
 }
